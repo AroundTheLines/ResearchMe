@@ -16,3 +16,5 @@ Nice to Haves:
 
 *COMPLETED:*
 - Sentiment Analysis with HP Haven onDemand
+- Google search for each skill
+- Counter and score for google search matching
