@@ -1,4 +1,4 @@
 # ResearchMe
-YHack Resume Crawler
+YHack Resume and Cover Letter Crawler
 
 Made by: Qile Wang, Purnima Mehta, Michael O'Connell, Nikki Sigurdson
