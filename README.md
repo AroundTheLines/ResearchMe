@@ -1,5 +1,5 @@
 # ResearchMe
-Project for YHack 2015. By Fiza Mehta,  Nikki Sigurdson, Michael O'Connell, Qile Wang
+Project for YHack 2015. By Purnima Mehta,  Nikki Sigurdson, Michael O'Connell, Qile Wang
 
 PURPOSE
 
