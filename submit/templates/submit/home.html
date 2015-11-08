@@ -1,8 +1,35 @@
-<h1>Home</h1>
+<head>
+	<style type="text/css">
+			
+		body{
+			background-color: #efefef;
+			color: #111111;
+			text-align: center;
+			font-family: sans-serif;
+		}
 
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+		h1{
+			font-size: 6vh;
+			margin-top: 10vh;
+		}
 
-<form action="{% url 'submit:process' %}" method="post">
-{% csrf_token %}
-    <a href="{% url 'submit:apply' %}">Submit an application!</a>
-</form>
+		a{
+			text-decoration: none;
+			font-size: 4vh;
+		}
+
+		a:hover{
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h1>Home</h1>
+
+	{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+	<form action="{% url 'submit:process' %}" method="post">
+	{% csrf_token %}
+	    <a href="{% url 'submit:apply' %}">Submit a resume!</a>
+	</form>
+</body>

@@ -1,3 +1,29 @@
+<head>
+    <style type="text/css">
+            
+        body{
+            background-color: #efefef;
+            color: #111111;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        h1{
+            font-size: 6vh;
+            margin-top: 10vh;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 4vh;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 <h1>Resume:</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
@@ -8,10 +34,11 @@
     Last Name: <input type="text" name="last_name" id="last_name"/><br /><br />
     City: <input type="text" name="city" id="city"/><br /><br />
     Cover Letter:<br />
-    <textarea name="cover_letter" id="cover_letter"></textarea><br /><br />
+    <textarea name="cover_letter" id="cover_letter" cols="70" rows="8"></textarea><br /><br />
     Skills:<br />
-    <textarea name="skills" id="skills"></textarea><br /><br />
+    <textarea name="skills" id="skills" cols="70" rows="8"></textarea><br /><br />
     Experience:<br />
-    <textarea name="experience" id="experience"></textarea><br /><br />
+    <textarea name="experience" id="experience" cols="70" rows="8"></textarea><br /><br />
 <input type="submit" value="Submit" />
 </form>
+</body>
