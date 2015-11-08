@@ -1,0 +1,8 @@
+<h1>Home</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'submit:process' %}" method="post">
+{% csrf_token %}
+    <a href="{% url 'submit:apply' %}">Submit an application!</a>
+</form>

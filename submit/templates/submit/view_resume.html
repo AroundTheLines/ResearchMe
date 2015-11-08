@@ -1,0 +1,9 @@
+{% if resume %}
+	Name: {{ resume.first_name }} {{ resume.last_name }}<br />
+	City: {{ resume.city }}<br />
+	Cover Letter:<br />{{ resume.cover_letter }}<br />
+	Skills:<br />{{ resume.skills }}<br />
+	Experience:<br />{{ resume.experience }}
+{% else %}
+	Error!
+{% endif %}

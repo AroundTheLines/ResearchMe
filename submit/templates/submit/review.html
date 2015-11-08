@@ -1,0 +1,17 @@
+<h1>Review Resumes:</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% csrf_token %}
+<table>
+    {% if resumes %}
+		<thead>
+			<tr><td>Name</td><td>Submitted</td><td>Rank</td></tr>
+		</thead>
+    	{% for resume in resumes %}
+    		<tr><td><a href="./view_resume/{{ resume.id }}/" >{{ resume.first_name }} {{ resume.last_name }}</a></td><td>{{ resume.sub_date }}</td><td>{{ resume.rank }}</td></tr>
+    	{% endfor %}
+    {% else %}
+    	No resumes available for review.
+    {% endif %}
+</table>

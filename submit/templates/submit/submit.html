@@ -1,0 +1,17 @@
+<h1>Resume:</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'submit:process' %}" method="post">
+{% csrf_token %}
+    First Name: <input type="text" name="first_name" id="first_name"/><br /><br />
+    Last Name: <input type="text" name="last_name" id="last_name"/><br /><br />
+    City: <input type="text" name="city" id="city"/><br /><br />
+    Cover Letter:<br />
+    <textarea name="cover_letter" id="cover_letter"></textarea><br /><br />
+    Skills:<br />
+    <textarea name="skills" id="skills"></textarea><br /><br />
+    Experience:<br />
+    <textarea name="experience" id="experience"></textarea><br /><br />
+<input type="submit" value="Submit" />
+</form>
