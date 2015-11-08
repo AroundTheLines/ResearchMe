@@ -1,16 +1,17 @@
 # database of skills and what they're related to
 # split string of text (skills) in to see if its in the database
-# each skill is assigned to a category: technical, financial etc
+# each skill is assigned to a category: technical/design etc
 
 import sqlite3 as lite
 import sys
 
 con = lite.connect('Skills.db')
 
+cur = con.cursor()
+# cur.execute("CREATE TABLE Skills(Id INT, Skills TEXT, Category TEXT)")
+
 with con:
 
-    cur = con.cursor()
-#    cur.execute("CREATE TABLE Skills(Id INT, Skills TEXT, Category TEXT)")
     cur.execute("INSERT INTO Skills VALUES(1, 'Programming', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(2, 'Java', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(3, 'Ruby','Technical')")
@@ -26,8 +27,6 @@ with con:
     cur.execute("INSERT INTO Skills VALUES(13, 'PHP', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(14, 'VisualBasic', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(15, 'SQL', 'Technical')")
-
-    #
     cur.execute("INSERT INTO Skills VALUES(16, 'Problem Solving', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(17, 'Critical Thinking', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(18, 'Debugging', 'Technical')")
@@ -63,28 +62,25 @@ with con:
     cur.execute("INSERT INTO Skills VALUES(48, 'Project Management', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(49, 'Development', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(50, 'Communication Skills', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Server Operating Systems', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Databases', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Cloud Computing', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Networking', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Scripting Languages', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Optimization', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Client networking', 'Technical')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Server networking', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(51, 'Server Operating Systems', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(52, 'Databases', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(53, 'Cloud Computing', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(54, 'Networking', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(55, 'Scripting Languages', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(56, 'Optimization', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(57, 'Client networking', 'Technical')")
+    cur.execute("INSERT INTO Skills VALUES(58, 'Server networking', 'Technical')")
 
     #Design category
-    cur.execute("INSERT INTO Skills VALUES(50, 'Marketing', 'Design')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Advertising', 'Design')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Design', 'Design')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Interactive Development', 'Design')")
-    cur.execute("INSERT INTO Skills VALUES(50, 'Copywriting', 'Design')")
+    cur.execute("INSERT INTO Skills VALUES(59, 'Marketing', 'Design')")
+    cur.execute("INSERT INTO Skills VALUES(60, 'Advertising', 'Design')")
+    cur.execute("INSERT INTO Skills VALUES(61, 'Design', 'Design')")
+    cur.execute("INSERT INTO Skills VALUES(62, 'Interactive Development', 'Design')")
+    cur.execute("INSERT INTO Skills VALUES(63, 'Copywriting', 'Design')")
 
 
 
+    con.commit()
 
 
-
-
-
-#sqlite>.mode column
-#sqlite>.headers on
+con.close()
