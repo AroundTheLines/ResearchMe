@@ -1,13 +1,8 @@
-<head>
-	<link rel="stylesheet" href="{{ STATIC_URL }}style.css" />
-</head>
-<body>
-	<h1>Home</h1>
+<h1>Home</h1>
 
-	{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-	<form action="{% url 'submit:process' %}" method="post">
-	{% csrf_token %}
-	    <a href="{% url 'submit:apply' %}">Submit an application!</a>
-	</form>
-</body>
+<form action="{% url 'submit:process' %}" method="post">
+{% csrf_token %}
+    <a href="{% url 'submit:apply' %}">Submit an application!</a>
+</form>
