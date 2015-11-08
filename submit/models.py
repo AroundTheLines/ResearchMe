@@ -16,7 +16,11 @@ class Resume(models.Model):
 
 class RunningTotal(models.Model):
     current_top = models.CharField(max_length=100)
+	def __str__(self):
+		return self.current_top
     
 class KeyWord(models.Model):
     word = models.CharField(max_length=1000)
     weight = models.CharField(max_length=100)
+	def __str__(self):
+		return self.word
