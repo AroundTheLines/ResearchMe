@@ -1,3 +1,7 @@
+<head>
+	<link rel="stylesheet" href="{{ STATIC_URL }}dist/css/styles.css" />
+</head>
+<body>
 {% if resume %}
 	Name: {{ resume.first_name }} {{ resume.last_name }}<br />
 	City: {{ resume.city }}<br />
@@ -7,3 +11,4 @@
 {% else %}
 	Error!
 {% endif %}
+</body>
