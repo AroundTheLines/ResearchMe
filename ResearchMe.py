@@ -24,6 +24,8 @@ with con:
     cur.execute("INSERT INTO Skills VALUES(10, 'C#', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(11, 'Javascript', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(12, 'OpenCL', 'Technical')")
+
+
     cur.execute("INSERT INTO Skills VALUES(13, 'PHP', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(14, 'VisualBasic', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(15, 'SQL', 'Technical')")
@@ -33,6 +35,8 @@ with con:
     cur.execute("INSERT INTO Skills VALUES(19, 'C', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(20, 'XML', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(21, 'Python', 'Technical')")
+
+
     cur.execute("INSERT INTO Skills VALUES(22, 'Pascal', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(23, 'Haskell', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(24, 'Scala', 'Technical')")
@@ -44,6 +48,8 @@ with con:
     cur.execute("INSERT INTO Skills VALUES(30, 'iOS', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(31, 'Android', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(32, 'Git', 'Technical')")
+
+
     cur.execute("INSERT INTO Skills VALUES(33, 'NodeJS', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(34, 'MeteorJS', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(35, 'Swift', 'Technical')")
@@ -54,6 +60,8 @@ with con:
     cur.execute("INSERT INTO Skills VALUES(40, 'Raspberry Pi', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(41, 'BASIC', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(42, 'FORTRAN', 'Technical')")
+
+
     cur.execute("INSERT INTO Skills VALUES(43, 'Oculus Rift', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(44, 'Myo', 'Technical')")
     cur.execute("INSERT INTO Skills VALUES(45, 'Spark Photon', 'Technical')")
