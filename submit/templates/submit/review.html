@@ -1,0 +1,44 @@
+<head>
+    <style type="text/css">
+            
+        body{
+            background-color: #efefef;
+            color: #111111;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        h1{
+            font-size: 6vh;
+            margin-top: 10vh;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 4vh;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Review Resumes:</h1>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    {% csrf_token %}
+    <table>
+        {% if resumes %}
+    		<thead>
+    			<tr><td>Name</td><td>Submitted</td><td>Rank</td></tr>
+    		</thead>
+        	{% for resume in resumes %}
+        		<tr><td><a href="./view_resume/{{ resume.id }}/" >{{ resume.first_name }} {{ resume.last_name }}</a></td><td>{{ resume.sub_date }}</td><td>{{ resume.rank }}</td></tr>
+        	{% endfor %}
+        {% else %}
+        	No resumes available for review.
+        {% endif %}
+    </table>
+</body>
